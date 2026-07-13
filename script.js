@@ -1,0 +1,15 @@
+window.addEventListener('load',()=>document.body.classList.add('loaded'));
+const header=document.querySelector('.site-header');
+const toggle=document.querySelector('.nav-toggle');
+const nav=document.querySelector('.site-nav');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40));
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open);document.body.classList.toggle('no-scroll',open)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('no-scroll')}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const dialog=document.querySelector('.lightbox');
+const dialogImg=dialog.querySelector('img');
+const dialogText=dialog.querySelector('p');
+document.querySelectorAll('.gallery-item').forEach(item=>item.addEventListener('click',()=>{dialogImg.src=item.querySelector('img').src;dialogImg.alt=item.querySelector('img').alt;dialogText.textContent=item.querySelector('figcaption').innerText;dialog.showModal()}));
+dialog.querySelector('.lightbox-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
