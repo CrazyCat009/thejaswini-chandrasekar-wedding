@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4e9dc"/><stop offset="1" stop-color="#d8b68a"/></linearGradient></defs>
+<rect width="1600" height="1100" fill="url(#g)"/>
+<circle cx="800" cy="455" r="155" fill="none" stroke="#8b5e3c" stroke-width="3" opacity=".45"/>
+<path d="M665 455h270M800 320v270" stroke="#8b5e3c" stroke-width="2" opacity=".35"/>
+<text x="800" y="720" text-anchor="middle" font-family="Georgia,serif" font-size="54" fill="#65452f">Wedding Photograph 06</text>
+<text x="800" y="790" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#7d6653">Replace assets/images/photo-06.jpg with your photograph</text>
+</svg>
